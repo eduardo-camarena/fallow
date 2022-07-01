@@ -7,8 +7,6 @@ COPY package.json package-lock.json ./
 RUN npm install
 
 COPY postcss.config.js tailwind.config.js tsconfig.json ./
-COPY public/ public/
-COPY pages/ pages/
-COPY styles/ styles/
+COPY src/ src/
 
 CMD npm run dev

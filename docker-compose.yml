@@ -12,8 +12,7 @@ services:
     networks:
       - fallow
     volumes:
-      - ./pages:/app/pages
-      - ./styles:/app/styles
+      - ./src:/app/src
 
   mariadb:
     container_name: mariadb
