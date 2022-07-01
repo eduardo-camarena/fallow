@@ -23,6 +23,9 @@
       "parser": "@typescript-eslint/parser",
       "plugins": ["@typescript-eslint", "prettier", "import"],
       "rules": {
+        "no-restricted-imports": ["error", {
+            "patterns": [".*"]
+        }],
         "@typescript-eslint/explicit-function-return-type": [
           "error",
           {
