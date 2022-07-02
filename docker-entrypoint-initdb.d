@@ -1,1 +1,0 @@
-CREATE USER 'fallow'@localhost IDENTIFIED BY 'fallow';
