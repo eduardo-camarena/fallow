@@ -1,32 +1,13 @@
 version: '3'
 services:
-  fallow:
-    image: fallow
-    container_name: fallow
-    build:
-      context: ./
-    command: npm run dev
-    env_file: ./.env
-    ports:
-      - '3000:3000'
-    networks:
-      - fallow
-    volumes:
-      - ./src:/app/src
-
   mariadb:
     container_name: mariadb
     image: mariadb:10.7.4
     env_file: ./.env
     ports:
       - '3306:3306'
-    networks:
-      - fallow
     volumes:
       - dbdata:/var/lib/mysql
 
 volumes:
   dbdata:
-
-networks:
-  fallow:
